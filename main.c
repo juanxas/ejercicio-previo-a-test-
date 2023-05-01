@@ -1,71 +1,27 @@
 #include <stdio.h>
-void circulo_perimetro (){ 
-    float perimetro (int diametro);{ 
-        float perimetro;
-        perimetro = 3.14 * diametro;
-        return perimetro;
-    }
+#include "operaciones .h"
+
+void imprimir (int suma, int res, int multipl, float divi){
+    printf("\nLa suma es:%d", suma);
+    printf("\nLa resta es: %d", res);
+    printf("\nLa multiplicacion es: %d", multipl);
+    printf("\nLa division es: %d", divi);
 }
 
-void circulo_area(){  
-    float area (int radio ){
-        float area;
-        area = 3.14 * radio^2;
-        return area;
-    }
-}
+int main (){
+    int num1,num2,num3;
+    int suma,resta,multiplica;
+    float dividi;
+    int opc;
+    printf("ingresar el primer numero\n");
+    scanf("%d", &num1);
 
-void triangulo_perimetro(int lado){
-    float perimetro; {
-        float perimetro;
-        perimetro = lado+lado+lado;
-        return perimetro; 
-    }        
-}
+    printf("ingrese el segundo numero\n");
+    scanf("%d", &num2);
 
-void triangulo_area(int base, int altura){
-    float area;{
-        float area;
-        area= (base*altura)/2;
-        return area;
-    }
-}
-
-void rectangulo_perimetro(int base, int altura){
-    float perimetro;{
-        float perimetro;
-        perimetro = 2*(base+altura);
-        return perimetro;
-    }
-} 
-
-void rectangulo_area(int base, int altura){
-    float area;{
-        float area;
-        area = base*altura;
-        return area;
-    }
-}
-
-void cuadrado_perimetro(int lado);{
-    float perimetro;{
-        float perimetro;
-        
-
-    }
-}
-
-void menu (){
-    int opcion;
-    do{
-        printf("\n****Bienvenido a su calculador de area y perimetro\n");
-        printf("1. Calcular un circulo\n");
-        printf("2. Calcular un triangulo\n");
-        printf("3. Calcular un rectangulo\n");
-        printf("4. Calcular un cuadrado\n");
-        printf("5. Calcular un trapecio\n");
-        printf("6. Salir\n");
-        printf("Ingrese la opcion");
-        scanf("%d", &opcion);
-    }
+    suma= sumar (num1, num2);
+    resta = restar(num1,num2);
+    multiplica= multiplicar(num1, num2);
+    dividi= dividir(num1,num2);
+    imprimir (suma, resta,multiplica, dividi);
 }
